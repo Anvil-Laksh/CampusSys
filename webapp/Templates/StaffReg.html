@@ -1,0 +1,28 @@
+{% load rest_framework %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Staff Registration</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+<form method="post" action="{% url 'StaffReg' %}">
+     {% csrf_token %}<br>
+
+     <label>Enter first name
+    <input type="text" name="first_name">
+</label><br>
+
+    <label> Enter last name
+        <input type="text" name="last_name">
+    </label><br>
+
+    Enter email id <label>
+    <input type="text" name="email">
+</label><br>
+
+    <input type="submit" value="Register">
+</form>
+</body>
+</html>
